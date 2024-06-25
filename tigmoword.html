@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tigmo Official Word Site</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+    h1 {
+        color: yellow;
+    }
+</style>
+<script>
+function redirectToRandomURL() {
+    // List of URLs
+    var urls = [
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Ee2oG9PlpxFCuB1fM8qx73wBYgCZdOW2U1cQORQcMZskYw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Ee3bogm1RT1Bhrl8ktk6shwBiKvdDBp9KG5aBDtgUR3sPA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EecWNzrZrmtDil0iaTWq2r0BUeOLaQdpkJURsbRifu8cvA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EUcKlq9YrUFBtEkSseS5O-EBmqIXcawTdbRp7eR2I-MohQ',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EfFv8wAamo1AoD0tHVd1OhcBOE7jTNrWLMFSmjswm1OsPA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EdXhqLuS4aVMnvFyWTaTTNYB_epDnMlC2BgeVNM7Kp7eqA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Eb0SDZTDuSNHjS5bceUWrgEBUcbXE4aKqqMtt2rp9ZtfIQ',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EQGL1nKFENtHhNvzvzOmD2IBGbbFh41T5fFzguxOXWeZmw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/ETjoWMSS16RLndaJy-8T-fgByb-kd-upCqdwzBjjpTJhbg',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Edu5CQla57pKmheyaj0txksBJ6Srm7v1PZIen6T5k_M9QA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EfGcwUo-dR9PggyhitYKb5wBpHtjJuYeiTCClUWKVArPvw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EZXAioPizTNPlMYi2KUb3eYBQJ9f12erej9ODdE0dDB6EA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Ebz__qAVr9FGsnPOhTOlrKUBkGf26aSH3F_4MpefKX_Azw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EYqFYo_mUnBFvi41EJpfG_IBe85dQEG12-kSby_5X0ajFw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EaIqafQFaq9LoOh8ZDZr1nABUQaQ6wGnQiTnwUsZw_B1VA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EcDfRvEoef5LqBEiLroHX1EBMNQXa0P1pri4dXewsWuPrw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EfGcwUo-dR9PggyhitYKb5wBpHtjJuYeiTCClUWKVArPvw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EZXAioPizTNPlMYi2KUb3eYBQJ9f12erej9ODdE0dDB6EA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EaIqafQFaq9LoOh8ZDZr1nABUQaQ6wGnQiTnwUsZw_B1VA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Eb87K3w9haJOmkE5bvv3RqYBaBwJ5RZTIqz9nZWe9FV-Ug',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EXUZUdjVJl9Jnh8DDo1XLfYBq3wnYVMp19yxc5JvAYwUng',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EWfpgxFRQdFHigpy5Wak1eIBZiqzzg3ULsTS7SzLrtwM0A',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EZpMpG6fLFdIucY1hamSz9UB5sMhqVw5gJmkJJktlbvfCA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EYhlC9q8pBVOikGsBUF2zMMBkXqFEkdRuqu2EWBUDa13yw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EecWNzrZrmtDil0iaTWq2r0BUeOLaQdpkJURsbRifu8cvA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/ES8zII5CFmFLsDH4sQWtbicBgMMQ9NDl-Z5aAW_IjRbgmQ',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EYsUHWJn4O5EiEGtbMbDDJQBs5dqDxt6NAXurE_9LyJjFA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EW1g8pM6T-FGpngcdlsqD8MBkChS_3vaiir4_XcAU1zj5g',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Ecwrm3noWohPhP0gQLa84U4BZZ1VQ_JrhrAKijQGE-_F1A',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/Eb0SDZTDuSNHjS5bceUWrgEBUcbXE4aKqqMtt2rp9ZtfIQ',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EQGL1nKFENtHhNvzvzOmD2IBGbbFh41T5fFzguxOXWeZmw',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EWGOQTwM0WxDrfVuSjSiphkB2AvL8fOSn6pkpr0udOOR-g',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EfFv8wAamo1AoD0tHVd1OhcBOE7jTNrWLMFSmjswm1OsPA',
+        'https://1drv.ms/i/c/1ebb5dba131a99e8/EUcKlq9YrUFBtEkSseS5O-EBmqIXcawTdbRp7eR2I-MohQ'
+    ];
+
+    // Pick a random URL from the list
+    var randomIndex = Math.floor(Math.random() * urls.length);
+    var randomURL = urls[randomIndex];
+
+    // Redirect to the random URL
+    window.location.href = randomURL;
+}
+</script>
+</head>
+<body>
+    <h1>Tigmo Official Word Site</h1>
+    <p>Thank you so much for choosing TIGMO! Click the button below to know the words you need to read.</p>
+    <button onclick="redirectToRandomURL()">Click Me</button>
+
+</body></html>
